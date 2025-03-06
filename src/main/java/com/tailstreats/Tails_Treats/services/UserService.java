@@ -2,6 +2,7 @@ package com.tailstreats.Tails_Treats.services;
 
 import com.tailstreats.Tails_Treats.models.Users;
 import com.tailstreats.Tails_Treats.repository.UserRepository;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class UserService {
     public Users createUser(Users user){
         return userRepo.save(user);
     }
-    public String  deleteUser(String id){
+    public String  deleteUser(ObjectId id){
         userRepo.deleteById(id);
         return "User deleted" ;
     }

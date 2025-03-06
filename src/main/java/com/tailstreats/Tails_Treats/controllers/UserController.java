@@ -15,10 +15,11 @@ public class UserController {
 
     @GetMapping("/all")
     public List<Users> getUsers(){
-        List<Users> ls = userService.getAllUsers();
-        return ls;
-
+        List<Users> docs = userService.getAllUsers();
+        System.out.println("The list of users is : "+ docs);
+        return userService.getAllUsers();
     }
+
     @PostMapping("/create")
     public void createUser(@RequestBody Users user){
         userService.createUser(user);
