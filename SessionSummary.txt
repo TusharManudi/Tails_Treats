@@ -1,0 +1,74 @@
+# Tails & Treats Project - Session Summary
+
+## Project Overview
+Tails & Treats is a food redistribution system connecting restaurants with surplus food to animal shelters. The application helps reduce food waste while providing nutrition to animals in shelters.
+
+## Backend Development
+- Created a Spring Boot application with MongoDB for data storage
+- Implemented JWT-based authentication system
+- Created User model with support for two user types: RESTAURANT and SHELTER
+- Implemented Food model for tracking food donations
+- Created controllers for authentication, food donation management, and user-specific operations
+- Implemented services for business logic
+
+## Key Backend Components
+1. Security Configuration:
+   - JWT token generation and validation
+   - Authentication filter
+   - Password encryption
+
+2. Models:
+   - User: For restaurants and shelters
+   - Food: For tracking food donations
+
+3. Controllers:
+   - AuthController: For user registration and login
+   - FoodController: For general food donation operations
+   - RestaurantController: For restaurant-specific operations
+   - ShelterController: For shelter-specific operations
+
+4. Services:
+   - AuthService: For user authentication
+   - FoodService: For food donation management
+
+## Frontend Development
+- Created a React application
+- Installed necessary dependencies (axios, react-router-dom, bootstrap, formik, yup, jwt-decode)
+- Set up project structure with directories for components, pages, services, utils, and context
+- Created a homepage with illustrations of cats and dogs
+- Implemented routing with React Router
+- Developed a professional registration form with validation using Formik and Yup
+- Created a clean and simple login page with proper styling and validation
+- Implemented authentication service for API communication
+- Added responsive design for both authentication pages
+- Set up placeholder dashboard routes for restaurants and shelters
+- Implemented protected routes for authenticated users
+- Created a restaurant dashboard with statistics and donation management
+- Developed a food donation form for restaurants
+- Added Bootstrap Icons for improved UI
+
+## Current Progress
+1. ✅ Set up React project structure
+2. ✅ Created an attractive homepage with illustrations
+3. ✅ Implemented user registration form with validation
+4. ✅ Created login page with authentication handling
+5. ✅ Set up API service for authentication
+6. ✅ Implemented protected routes for authenticated users
+7. ✅ Created restaurant dashboard with statistics and donation management
+8. ✅ Developed food donation form for restaurants
+
+## Next Steps
+1. Implement shelter dashboard
+2. Create food claiming functionality for shelters
+3. Implement state management for user authentication
+4. Add navigation component
+5. Implement responsive design for mobile devices
+6. Create donation detail view
+7. Add profile editing functionality
+8. Implement notification system for donation status changes
+
+## API Documentation
+Created comprehensive API documentation explaining all available endpoints and how to use them, including:
+- User registration and login
+- Food donation management
+- Restaurant and shelter specific operations

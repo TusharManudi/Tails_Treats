@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Modern variables with tailwind-inspired color scheme */
+:root {
+  --primary-color: #ea580c;    /* Orange-600 */
+  --primary-hover: #c2410c;    /* Orange-700 */
+  --primary-light: #fdba74;    /* Orange-300 */
+  --secondary-color: #f97316;  /* Orange-500 */
+  --text-dark: #111827;        /* Gray-900 */
+  --text-medium: #374151;      /* Gray-700 */
+  --text-light: #6b7280;       /* Gray-500 */
+  --background-light: #ffffff; /* White */
+  --background-off: #f9fafb;   /* Gray-50 */
+  --border-color: #e5e7eb;     /* Gray-200 */
+  --transition: all 0.2s ease;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  line-height: 1.5;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 4px !important;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  transform: translateY(-1px);
+  color: white !important; /* Ensure text remains visible on hover */
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--border-color) !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(249, 115, 22, 0.05) !important;
+  color: var(--primary-hover) !important;
+  border-color: var(--primary-color) !important; /* Keep border visible */
+}
+
+/* Remove blue outline and add custom focus styles */
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:focus, .btn-primary:active {
+  background-color: var(--primary-hover) !important;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary:active {
+  border-color: var(--primary-color) !important;
+}
+
+/* App specific styles */
+.App-header {
+  background-color: var(--background-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-dark);
+}
+
+.App-link {
+  color: var(--primary-color);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Simple fade animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

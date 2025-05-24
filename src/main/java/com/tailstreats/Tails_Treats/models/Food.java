@@ -1,73 +1,148 @@
 package com.tailstreats.Tails_Treats.models;
 
-import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
-@NoArgsConstructor
-@Document(collection = "food_listing")
+
+@Document(collection = "foods")
 public class Food {
+    
     @Id
     private String id;
-    private String restaurantId;
     private String foodName;
     private String description;
-    private Integer quantity;
-    private String pickupLocation ;
-    private String status;
-    private LocalDateTime postedAt;
-    private LocalDateTime expiryAt;
-
-    public void setStatus(String status){
-        this.status = status ;
-    }
-
-    public Food(String id, String restaurantId, String foodName, String description, Integer quantity, String pickupLocation, String status, LocalDateTime expiryAt) {
-        this.id = id;
-        this.restaurantId = restaurantId;
-        this.foodName = foodName;
-        this.description = description;
-        this.quantity = quantity;
-        this.pickupLocation = pickupLocation;
-        this.status = "Available";
-        this.postedAt = LocalDateTime.now();
-        this.expiryAt = expiryAt;
-    }
-
+    private String restaurantId;
+    private String shelterId;
+    private String status; // AVAILABLE, CLAIMED, PICKED_UP, DELIVERED, EXPIRED
+    private LocalDateTime donationTime;
+    private LocalDateTime claimTime;
+    private LocalDateTime pickupTime; // Note: Changed from pickUpTime to pickupTime for consistency
+    private LocalDateTime deliveryTime;
+    private LocalDateTime expiryTime;
+    private String quantity;
+    private String foodType; // e.g., "Dry Food", "Wet Food", "Treats"
+    private String animalType; // e.g., "Dog", "Cat", "Bird"
+    
+    // Default constructor
+    public Food() {}
+    
+    // Getters and Setters
     public String getId() {
         return id;
     }
-
-    public String getRestaurantId() {
-        return restaurantId;
+    
+    public void setId(String id) {
+        this.id = id;
     }
-
+    
     public String getFoodName() {
         return foodName;
     }
-
+    
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
+    
     public String getDescription() {
         return description;
     }
-
-    public Integer getQuantity() {
-        return quantity;
+    
+    public void setDescription(String description) {
+        this.description = description;
     }
-
-    public String getPickupLocation() {
-        return pickupLocation;
+    
+    public String getRestaurantId() {
+        return restaurantId;
     }
-
+    
+    public void setRestaurantId(String restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+    
+    public String getShelterId() {
+        return shelterId;
+    }
+    
+    public void setShelterId(String shelterId) {
+        this.shelterId = shelterId;
+    }
+    
     public String getStatus() {
         return status;
     }
-
-    public LocalDateTime getPostedAt() {
-        return postedAt;
+    
+    public void setStatus(String status) {
+        this.status = status;
     }
-
-    public LocalDateTime getExpiryAt() {
-        return expiryAt;
+    
+    public LocalDateTime getDonationTime() {
+        return donationTime;
+    }
+    
+    public void setDonationTime(LocalDateTime donationTime) {
+        this.donationTime = donationTime;
+    }
+    
+    public LocalDateTime getClaimTime() {
+        return claimTime;
+    }
+    
+    public void setClaimTime(LocalDateTime claimTime) {
+        this.claimTime = claimTime;
+    }
+    
+    public LocalDateTime getPickupTime() {
+        return pickupTime;
+    }
+    
+    public void setPickupTime(LocalDateTime pickupTime) {
+        this.pickupTime = pickupTime;
+    }
+    
+    // For backward compatibility with existing code
+    public void setPickUpTime(LocalDateTime pickupTime) {
+        this.pickupTime = pickupTime;
+    }
+    
+    public LocalDateTime getDeliveryTime() {
+        return deliveryTime;
+    }
+    
+    public void setDeliveryTime(LocalDateTime deliveryTime) {
+        this.deliveryTime = deliveryTime;
+    }
+    
+    public LocalDateTime getExpiryTime() {
+        return expiryTime;
+    }
+    
+    public void setExpiryTime(LocalDateTime expiryTime) {
+        this.expiryTime = expiryTime;
+    }
+    
+    public String getQuantity() {
+        return quantity;
+    }
+    
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+    
+    public String getFoodType() {
+        return foodType;
+    }
+    
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
+    }
+    
+    public String getAnimalType() {
+        return animalType;
+    }
+    
+    public void setAnimalType(String animalType) {
+        this.animalType = animalType;
     }
 }
+
