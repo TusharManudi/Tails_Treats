@@ -313,9 +313,6 @@ Authorization: Bearer {token}
 ### Shelter Dashboard
 ![ShelterDash](https://github.com/user-attachments/assets/1b865652-32f3-470b-a06a-0c4d4ae8216d)
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 👥 Contributing
 
