@@ -328,7 +328,3 @@ For questions or support, please open an issue in the GitHub repository.
 ---
 
 **Built with ❤️ to reduce food waste and support animal welfare**
-![dfd](https://github.com/user-attachments/assets/51c3c3e5-75db-486c-8727-848854fd1417)
-![homeSS](https://github.com/user-attachments/assets/4ecf7127-8876-4b72-b21a-f1cb2f2caf4f)
-![RestDash](https://github.com/user-attachments/assets/28ff7e7a-2d12-4c04-abe6-a90535e2b29c)
-![ShelterDash](https://github.com/user-attachments/assets/1b865652-32f3-470b-a06a-0c4d4ae8216d)
